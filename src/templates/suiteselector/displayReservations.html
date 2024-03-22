@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="bg-current-navy">
+    <div class="container py-5 text-light">
+        <h1 class="border-bottom w-25">My Reservations</h1>
+
+        <p> reservations will loop and display here</p>
+        {% for reservation in reservation %}
+        <div>
+           {% comment %} display all reservation info for the user that is logged in {% endcomment %}
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
+
+{%endblock%}

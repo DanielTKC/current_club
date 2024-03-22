@@ -1,0 +1,86 @@
+[
+{
+    "model": "restfulclub.suite",
+    "pk": 1,
+    "fields": {
+        "name": "Tiny Suite Big Views",
+        "capacity": 10,
+        "description": "This suite offers the perfect intersection of luxury and intimacy. The small size is perfect for a curated list of V.I.P.s to relax and cheer the Current to victory.",
+        "price": "50.00",
+        "suite_photo": "photos/suite/smallLuxury1_tKWIE1f.jpg",
+        "amenities": "private restrooms, private bar, couch and table seating, room service, valet parking, private entrance"
+    }
+},
+{
+    "model": "restfulclub.suite",
+    "pk": 2,
+    "fields": {
+        "name": "Mid sized but not mid",
+        "capacity": 15,
+        "description": "Experience the perfect blend of affordability and camaraderie in this suite. Offering a cozy yet dynamic atmosphere, this suite proves that size doesn't compromise comfort, providing an intimate setting for enjoying the game without compromising on the budget.",
+        "price": "65.00",
+        "suite_photo": "photos/suite/mediumEconomy.jpg",
+        "amenities": "two televisions, access to Current Club concourse concessions and restrooms"
+    }
+},
+{
+    "model": "restfulclub.suite",
+    "pk": 3,
+    "fields": {
+        "name": "Large and in Charge",
+        "capacity": 20,
+        "description": "This suite redefines budget-friendly luxury allowing you to embrace the energy of the game in a generous setting that combines ample seating with a vibrant atmosphere, ensuring affordability doesn't mean sacrificing the thrill of watching soccer with a sizable group of friends.",
+        "price": "75.00",
+        "suite_photo": "photos/suite/suite1.jpg",
+        "amenities": "access to Current Club concourse concessions and restrooms"
+    }
+},
+{
+    "model": "restfulclub.suite",
+    "pk": 4,
+    "fields": {
+        "name": "The Big Kahuna",
+        "capacity": 50,
+        "description": "\"The Big Kahuna\" is the pinnacle of soccer hospitality, offering a grandeur experience tailored for large groups and businesses alike. With seating for up to 50 people, this expansive suite provides a sophisticated setting, replete with top-notch amenities, ensuring an unforgettable fusion of sports enthusiasm and corporate entertainment for all.",
+        "price": "125.00",
+        "suite_photo": "photos/suite/Flagship.jpg",
+        "amenities": "private restrooms, catered buffet, staffed bar, premium parking"
+    }
+},
+{
+    "model": "restfulclub.suite",
+    "pk": 5,
+    "fields": {
+        "name": "Larger and in charger",
+        "capacity": 20,
+        "description": "This suite elevates your soccer experience to unprecedented heights. Immerse yourself in splendor with expansive seating, generous amenities, and an exclusive ambiance that places you in the lap of luxury while enjoying the excitement of the game.",
+        "price": "75.00",
+        "suite_photo": "photos/suite/largeLuxury.jpg",
+        "amenities": "private restrooms, private bar, couch and table seating, room service, valet parking, private entrance"
+    }
+},
+{
+    "model": "restfulclub.suite",
+    "pk": 6,
+    "fields": {
+        "name": "Luxury medium",
+        "capacity": 15,
+        "description": "An opulent suite designed for those with the most sophisticated of palettes. This exclusive haven combines unparalleled comfort with panoramic views, ensuring an immersive and stylish experience as you savor the excitement of the game in absolute luxury.",
+        "price": "65.00",
+        "suite_photo": "photos/suite/mediumLuxury_xwY7XLw.jpg",
+        "amenities": "private restrooms, private bar, couch and table seating, room service, valet parking, private entrance"
+    }
+},
+{
+    "model": "restfulclub.suite",
+    "pk": 7,
+    "fields": {
+        "name": "The Poor House",
+        "capacity": 10,
+        "description": "This affordable suite is the perfect place to get away from the crowd and take in the game in a private setting. Step up your game day experience without breaking the bank or breaking a sweat.",
+        "price": "50.00",
+        "suite_photo": "photos/suite/smallEconomy_EVQVTCg.jpg",
+        "amenities": "one television, access to Current Club concourse concessions and restrooms"
+    }
+}
+]

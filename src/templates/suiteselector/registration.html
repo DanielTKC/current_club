@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+  <header class="bg-current-teal py-5">
+    <div class="container px-0 px-lg-0 my-0">
+        <div class="text-center text-white">
+            <img class="img-fluid slide-in-image" src="{% static '/login/currentclub.png' %}" alt="...">
+        </div>
+    </div>
+  </header>
+
+
+  <section class="py-5 bg-current-navy">
+    <div class="form-body">
+      <div class="row">
+        <div class="form-holder">
+          <div class="form-content">
+            <div class="form-items">
+
+              <h3>Registration Information</h3>
+              <form id="registrationForm" class="row g-3 requires-validation" novalidate>
+                {% csrf_token %}
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <input type="text" name="first_name" class="form-control" placeholder="First Name" id="first_name" aria-label="first_name" required> 
+                    <div class="invalid-feedback">Cannot be blank</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" name="last_name" class="form-control" placeholder="Last Name" id="last_name" aria-label="last_name" required> 
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="col-sm-6 position-relative">
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Email Address" aria-label="email" required>
+                  </div>
+                  <div class="col-sm-6 position-relative">
+                    <input type="text" name="password" class="form-control" id="password" placeholder="Password" aria-label="password" required>
+                  </div>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-sm-6 position-relative">
+                    <input type="text" name="address" class="form-control" id="address" placeholder="Address" aria-label="address" required>
+                  </div>  
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-sm-6 position-relative">
+                    <input type="text" name="city" class="form-control" id="city" placeholder="City" aria-label="City" required>
+                  </div>  
+                  <div class="col-sm position-relative">
+                    <input type="text" name="state" class="form-control" id="state" placeholder="State" aria-label="State" required>
+                  </div> 
+                  <div class="col-sm position-relative">
+                    <input type="text" name="zip_code" class="form-control" id="zip_code" placeholder="Zipcode" aria-label="Zipcode" required>
+                  </div> 
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-sm-6 position-relative">
+                    <input type="text" name="phone_number" class="form-control" id="phone_number" placeholder="Phone Number" aria-label="Phone Number" required>
+                  </div>
+                </div>
+
+                <button class="rounded-button" style="margin-top: 20px;" >Submit</button>  
+              </form>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+  </section>
+
+
+{% endblock %}
+{% block scripts %}
+{{ block.super }}
+<script src="{% static 'js/registration.js' %}"></script>
+{% endblock %}

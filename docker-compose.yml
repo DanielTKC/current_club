@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  app:
+    command: "poetry run python src/manage.py runserver 0.0.0.0:8000"
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - dbdata:/usr/src/app/src/data
+      
+    ports:
+      - "8000:8000"
+
+volumes:
+  dbdata:  # Define a named volume for SQLite data

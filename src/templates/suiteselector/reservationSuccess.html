@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="py-5 bg-current-navy">
+    <div class="container px-4 px-lg-5 text-white justify-content-center">
+        <h1>Reservation Successful!</h1>
+        <p>Thank you for your reservation. Here are your current reservations:</p>
+
+        <ul>
+            {% for reservation in reservations %}
+            <li>
+                Match: {{reservation.match_details.opponent }} on {{ reservation.match_details.match_date }}<br>
+                Suite: {{ reservation.suite_details.name }}<br>
+                Total Price: ${{ reservation.total_price }}
+                <button onclick="cancelReservation({{ reservation.id }})" class="btn btn-danger btn-sm">Cancel</button>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock %}
+{% block scripts %}
+{{ block.super }}
+<script src="{% static 'js/cancelReservations.js' %}"></script>
+{% endblock %}

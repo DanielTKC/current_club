@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class=" py-5 bg-current-navy">
+        <div class=" container px-4 px-lg-5 text-white justify-content-center">
+            <form class="w-50" method="POST" action="{% url 'reservation_form' match_id=match.id suite_id=suite.id %}">
+                {% csrf_token %}
+                    <input type="hidden" name="token" id="token" value="">
+
+                <h1 class=>Reserve Now</h1>
+                <h3 class="border-bottom mt-3 ">Customer Information</h3>
+                <div class="row row-cols-2">
+                    <div>
+                        <label for="reservationFirstName">First Name</label>
+                        <input type="text" name="first_name" class="form-control" id="reservationFirstName">
+                    </div>
+                    <div>
+                        <label for="reservationLastName">Last Name</label>
+                        <input type="text" name="last_name" class="form-control" id="reservationLastName">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reservationEmailAddress">Email address</label>
+                    <input type="email" name="email" class="form-control" id="reservationEmailAddress"
+                           value="{{ user.email }}" aria-describedby="emailHelp">
+                </div>
+                <h3 class="border-bottom mt-3 ">Suite Information</h3>
+                <div class="fs-5">
+                    <p>Match: {{ match.opponent }} on {{ match_date }}</p>
+                    <p>Suite: {{ suite.name }}</p>
+                    <p>Total Price: ${{ total_price }}</p>
+                </div>
+
+                {#            <h3 class="border-bottom mt-3 ">Payment Information</h3>#}
+                {#            <div>#}
+                {#                <label for="reservationCreditCard">Credit Card: </label>#}
+                {#                <input class="form-control"type="text" inputmode="numeric"  maxlength="19" placeholder="XXXX-XXXX-XXXX-XXXX">#}
+                {#            <div class="row row-cols-2">#}
+                {#                <div>#}
+                {#                    <label for="reservationExperiationMonth">Expiration Month: </label>#}
+                {#                    <select class="form-control" name="month" id="reservationExperiationMonth">#}
+                {#                        <option value="1">01</option>#}
+                {#                        <option value="2">02</option>#}
+                {#                    </select>#}
+                {#                </div>#}
+                {#                <div>#}
+                {#                    <label for="reservationExperiationYear">Expiration Year: </label>#}
+                {#                    <select class="form-control"name="year" id="reservationExpirationYear">#}
+                {#                        <option value="1">01</option>#}
+                {#                        <option value="2">02</option>#}
+                {#                    </select>#}
+                {#                </div>#}
+                {#            </div>#}
+                {#            <label for="ccv">CCV: </label>#}
+                {#            <input class="form-control" type="number" inputmode="numeric" pattern="[0-9]{3}" maxlength="3">#}
+                {#        </div>#}
+                <button class="rounded-button" style="margin-top: 20px;">Submit</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}
+{% block scripts %}
+    {{ block.super }}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        // Retrieve the token from local storage
+        var token = localStorage.getItem('token');
+        // Set the token value in the hidden input field
+        document.getElementById('token').value = token;
+    });
+    </script>
+{% endblock %}

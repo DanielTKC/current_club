@@ -1,0 +1,42 @@
+[
+{
+    "model": "restfulclub.match",
+    "pk": 1,
+    "fields": {
+        "opponent": "NC Courage",
+        "match_date": "2024-05-12T17:00:00Z",
+        "location": "Home",
+        "match_image": "photos/match/couragematch.png"
+    }
+},
+{
+    "model": "restfulclub.match",
+    "pk": 2,
+    "fields": {
+        "opponent": "Seattle Reign",
+        "match_date": "2024-06-09T17:00:00Z",
+        "location": "Home",
+        "match_image": "photos/match/reignmatch.png"
+    }
+},
+{
+    "model": "restfulclub.match",
+    "pk": 3,
+    "fields": {
+        "opponent": "Orlando Pride",
+        "match_date": "2024-07-06T18:30:00Z",
+        "location": "Home",
+        "match_image": "photos/match/pridematch.png"
+    }
+},
+{
+    "model": "restfulclub.match",
+    "pk": 4,
+    "fields": {
+        "opponent": "San Diego Wave",
+        "match_date": "2024-10-19T12:00:00Z",
+        "location": "Home",
+        "match_image": "photos/match/wavematch.png"
+    }
+}
+]

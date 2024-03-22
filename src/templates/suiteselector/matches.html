@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<header class="bg-current-teal py-5">
+    <div class="container px-0 px-lg-0 my-0">
+        <div class="text-center text-white">
+            <img class="img-fluid" src="{% static '/matches/headerKC.png' %}" alt="..." >
+           
+        </div>
+    </div>
+</header>
+
+<section class="py-5 bg-current-navy" >
+  <div class="container px-4 mt-5" id="matchespage">
+      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        {% for match in matches %}
+        <div class="col mb-5">
+            <div class="card matchescard " style="background-image: url('{{ match.match_image }}');">
+                
+                <div class="card-body p-4 text-white d-flex flex-column justify-content-end ">
+                  <div class="text-center" style="margin-top: 130px;">
+              <!-- Product details-->
+              <h5 class="fw-bolder mt-auto">{{ match.opponent }}</h5>
+              <p>{{ match.formatted_match_date }}</p>
+              <p>{{ match.formatted_match_time }}</p>
+                    </div>
+                </div>
+                             <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent" >
+                    <div class="text-center">
+                        {% if suite_id %}
+                        <a><button class="rounded-button btn btn-outline-dark mt-auto" style="margin-top: 20px;" 
+                            onclick="bookNow({{ match.id }}, {{ suite_id }})">Book Now</button></a>
+                        {%  else %}
+                        <a><button class="rounded-button btn btn-outline-dark mt-auto" style="margin-top: 20px;" 
+                               onclick="viewOptions({{ match.id }})">View Options</button></a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+
+      </div>
+  </div>
+    
+</section> 
+
+{% endblock %}
+
+{% block scripts %}
+{{ block.super }}
+<script src="{% static 'js/matches.js' %}"></script>
+{% endblock %}
