@@ -13,14 +13,9 @@ README.md
 
 1. Head over to and download [Docker](https://docs.docker.com/get-docker/)
 
-2. Using terminal,clone the **main** repository into whatever folder you will be using 
-- For ssh: `git clone git@gitlab.com:jccc7913624/cis-264/sp-2024/team-2/current-club.git`
+2. Using terminal,clone the **main** repository into whatever folder you will be using this command in terminal
+- git clonehttps://github.com/DanielTKC/current_club.git
 
-- For https: `git clone https://gitlab.com/jccc7913624/cis-264/sp-2024/team-2/current-club.git`
-
-## **OR** ##
-
-2. In gitlab, click the Code dropdown and select "Open in your IDE" and select visual studio code.
 
 3. If this is a fresh download of the existing repo type `docker-compose build --no-cache`
 
