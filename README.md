@@ -14,7 +14,7 @@ README.md
 1. Head over to and download [Docker](https://docs.docker.com/get-docker/)
 
 2. Using terminal,clone the **main** repository into whatever folder you will be using this command in terminal
-- git clonehttps://github.com/DanielTKC/current_club.git
+- git clone https://github.com/DanielTKC/current_club.git
 
 
 3. If this is a fresh download of the existing repo type `docker-compose build --no-cache`
